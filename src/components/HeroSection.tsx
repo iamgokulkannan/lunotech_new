@@ -25,7 +25,7 @@ const HeroSection = () => {
         {/* Main Content */}
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2 mb-8 animate-fade-in hover:scale-105 hover:shadow-lg hover:border-blue-400 hover:bg-blue-100 transition-all duration-300 group cursor-pointer">
+          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2 mt-8 mb-8 animate-fade-in hover:scale-105 hover:shadow-lg hover:border-blue-400 hover:bg-blue-100 transition-all duration-300 group cursor-pointer">
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse group-hover:scale-125 transition-transform duration-300"></div>
             <span className="text-blue-700 text-sm font-medium group-hover:text-blue-800 transition-colors duration-300">
               Creative Digital Solutions
@@ -82,7 +82,7 @@ const HeroSection = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute -bottom-20 left-1/2 animate-bounce">
+        <div className="absolute -bottom-20 left-1/2 animate-bounce hidden md:block">
           <div className="relative left-[-50%]">
             <button 
               onClick={() => scrollToSection('about')}
