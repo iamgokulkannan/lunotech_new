@@ -26,3 +26,8 @@ ContactSection.tsx
 /ContactSection.tsx
 
 /public/images
+# Local Netlify folder
+.netlify
+.dist
+/netlify
+/dist

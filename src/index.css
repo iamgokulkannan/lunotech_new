@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'TheSeasons';
-  src: url('fonts//Demo_Fonts/Fontspring-DEMO-theseasons-reg.otf') format('opentype');
+  src: url("/fonts/Demo_Fonts/Fontspring-DEMO-theseasons-reg.otf") format('opentype');
 }
 
 .TheSeasons {
