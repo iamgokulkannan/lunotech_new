@@ -31,3 +31,5 @@ ContactSection.tsx
 .dist
 /netlify
 /dist
+/email-backend
+.email-backend
