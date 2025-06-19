@@ -229,45 +229,58 @@
 input,
 textarea,
 select {
-  -webkit-appearance: none !important;
-  appearance: none !important;
+  all: unset;
+  display: block;
+  width: 100%;
+  font: inherit;
+  color: black;
   background-color: white !important;
-  color: black !important;
-  outline: none !important;
-  border: 1px solid #e5e7eb !important;
-  border-radius: 0.75rem !important;
-  transition: background-color 5000s ease-in-out 0s;
+  border: 1px solid black !important;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
 }
 
-/* Handle autofill */
+/* Consistent look even on autofill (Chrome, Safari) */
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px white inset !important;
-  box-shadow: 0 0 0 1000px white inset !important;
-  -webkit-text-fill-color: #000 !important;
-  transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: black !important;
+  transition: background-color 9999s ease-in-out 0s;
+  border: 1px solid black !important;
 }
 
-/* Custom focus styling */
+/* Disable all focus-related outlines, glows, shadows */
 input:focus,
 textarea:focus,
-select:focus {
-  outline: 2px solid rgb(59 130 246) !important;
-  outline-offset: 2px !important;
-}
-
-/* Optional focus-visible control */
-input:focus:not(:focus-visible),
-textarea:focus:not(:focus-visible),
-select:focus:not(:focus-visible) {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
+select:focus,
 input:focus-visible,
 textarea:focus-visible,
-select:focus-visible {
-  outline: 2px solid rgb(59 130 246) !important;
-  outline-offset: 2px !important;
+select:focus-visible,
+input:focus-within,
+textarea:focus-within,
+select:focus-within,
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 1px solid black !important;
+}
+
+select {
+  appearance: auto !important; /* Show default dropdown arrow */
+  -webkit-appearance: auto !important;
+  -moz-appearance: auto !important;
+
+  all: unset;
+  display: block;
+  width: 100%;
+  font: inherit;
+  color: black;
+  background-color: white !important;
+  border: 1px solid black !important;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
 }
