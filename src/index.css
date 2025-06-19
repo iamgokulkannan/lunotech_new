@@ -226,46 +226,48 @@
   }
 }
 
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-  background-color: white !important;
-  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
-  box-shadow: 0 0 0px 1000px white inset !important;
-  -webkit-text-fill-color: #000 !important;
-  transition: background-color 5000s ease-in-out 0s; /* prevents quick flash */
-}
-html, body {
-  background-color: white;
-}
-
 input,
 textarea,
 select {
+  -webkit-appearance: none !important;
+  appearance: none !important;
   background-color: white !important;
   color: black !important;
-  outline: none !important; /* Remove default outline */
+  outline: none !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 0.75rem !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
+/* Handle autofill */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Custom focus styling */
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid rgb(59 130 246) !important; /* Apply custom blue outline */
+  outline: 2px solid rgb(59 130 246) !important;
   outline-offset: 2px !important;
 }
 
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
-  box-shadow: 0 0 0px 1000px white inset !important;
-  outline: 2px solid rgb(59, 130, 246) !important;
-  outline-offset: 2px !important;
+/* Optional focus-visible control */
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-html input:focus,
-html textarea:focus,
-html select:focus {
-  outline: 2px solid rgb(59 130 246) !important; /* Ensure global focus styles */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgb(59 130 246) !important;
   outline-offset: 2px !important;
 }
