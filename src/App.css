@@ -99,3 +99,18 @@ select {
   padding: 0.75rem 1rem;
   box-sizing: border-box;
 }
+
+/* Prevent yellow autofill */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+/* Ensure background is not yellow anywhere */
+html, body {
+  background-color: white;
+  color: black;
+}
