@@ -237,3 +237,10 @@ select:-webkit-autofill {
 html, body {
   background-color: white;
 }
+
+input,
+textarea,
+select {
+  background-color: white !important;
+  color: black !important;
+}
